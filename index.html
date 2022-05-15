@@ -323,14 +323,13 @@
 
 
                   <div class="icon">
-
-                <ul v-staggerdelay="50" v-show="skillsType === 'skills'">
-                  <li tabindex
+                  <ul v-staggerdelay="50" v-show="skillsType === 'skills'">
+                  <li tabindex="0"
                     v-for="skill in skillsItems"
                     :key="skill.title"
                     v-tooltip="{text: skill.title, dir: 'top'}">
                     <div class="skill-icon">
-                      <img src="fa fa-html5" alt="here">
+                      <img :src="skill.imgUrl" :alt="skill.title">
                     </div>
                   </li>
                 </ul>
